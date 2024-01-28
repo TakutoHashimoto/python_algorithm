@@ -1,8 +1,16 @@
+"""
+bogoソート
+リストを適当にシャッフルして、シャッフル後のリストがソートされているかをチェックする
+"""
+
 import random
 from typing import List
 
 
 def bogo_sort(numbers: List[int]) -> List[int]:
+    """
+    リストが昇順になるまでシャッフルする
+    """
     while not in_order(numbers):
         random.shuffle(numbers)
     return numbers
